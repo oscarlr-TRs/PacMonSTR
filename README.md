@@ -41,3 +41,5 @@ The bed file must contain 6 columns:
 4. motif size
 5. motif sequence
 6. copies of motif in the reference
+
+## Output
