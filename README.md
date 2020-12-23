@@ -71,3 +71,4 @@ The output is a 23 columned BED file:
 22. hap2_suffix_scores
 23. hap2_motif_scores
 ```
+Since there could be multiple reads overlapping the tandem repeat, PacMonSTR reports the average and max copies as well as all the copies found across all the reads. The alignment score for each part of the alignment is also reported.
