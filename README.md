@@ -14,7 +14,7 @@ python setup.py install
 pacmonstr test/test.bam test/test.bed test/test_ref.fasta test/out.bed
 ```
 
-## Input
+## Manual
 ```
 usage: pacmonstr [-h] [--padding PADDING] bam bed ref outbed
 
