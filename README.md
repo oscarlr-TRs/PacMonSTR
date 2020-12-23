@@ -43,3 +43,27 @@ The bed file must contain 6 columns:
 6. copies of motif in the reference
 
 ## Output
+The output is a XX columned BED file:
+1. chrom
+2. start
+3. end
+4. motif
+5. copies_in_ref
+6. hap0_avg
+7. hap0_max
+8. hap0_copies
+9. hap0_prefix_scores
+10. hap0_suffix_scores
+11. hap0_motif_scores
+12. hap1_avg
+13. hap1_max
+14. hap1_copies
+15. hap1_prefix_scores
+16. hap1_suffix_scores
+17. hap1_motif_scores
+18. hap2_avg
+19. hap2_max
+20. hap2_copies
+21. hap2_prefix_scores
+22. hap2_suffix_scores
+23. hap2_motif_scores
