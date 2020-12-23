@@ -2,7 +2,8 @@
 ## Intro
 This is refactored code from ```https://github.com/alibashir/pacmonstr``` containing only code corresponding to the dynamic programming (modified Smith–Waterman) algorithm used to count tandem repeat motifs from:
 ```
-A. Ummat, A. Bashir, Resolving complex tandem repeats with long reads. Bioinformatics. 30, 3491–3498 (2014).
+A. Ummat, A. Bashir, Resolving complex tandem repeats with long reads. 
+Bioinformatics. 30, 3491–3498 (2014).
 ```
 
 ## Quick start
