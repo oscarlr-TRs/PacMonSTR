@@ -30,3 +30,6 @@ optional arguments:
   -h, --help         show this help message and exit
   --padding PADDING  Padding added to input BED
   ```
+## Inputs
+### BAM file
+The reads in the BAM file must contain read group tags "0","1" or "2". "1" and "2" correspond to haplotype 1 and haplotype 2. "0" are unphased reads.
