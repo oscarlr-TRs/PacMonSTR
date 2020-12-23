@@ -14,3 +14,18 @@ pacmonstr test/test.bam test/test.bed test/test_ref.fasta test/out.bed
 ```
 
 ## Input
+```
+usage: pacmonstr [-h] [--padding PADDING] bam bed ref outbed
+
+Genotype TRs
+
+positional arguments:
+  bam                Alignments with read groups for haps
+  bed                BED file with TRs
+  ref                Fasta file with reference
+  outbed
+
+optional arguments:
+  -h, --help         show this help message and exit
+  --padding PADDING  Padding added to input BED
+  ```
