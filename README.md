@@ -33,3 +33,11 @@ optional arguments:
 ## Inputs
 ### BAM file
 The reads in the BAM file must contain read group tags "0","1" or "2". "1" and "2" correspond to haplotype 1 and haplotype 2. "0" are unphased reads.
+### BED file
+The bed file must contain 6 columns:
+1. chrom
+2. start
+3. end
+4. motif size
+5. motif sequence
+6. copies of motif in the reference
