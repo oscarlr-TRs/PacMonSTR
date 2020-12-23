@@ -45,7 +45,7 @@ The bed file must contain 6 columns:
 ```
 
 ## Output
-The output is a XX columned BED file:
+The output is a 23 columned BED file:
 ```
 1. chrom
 2. start
