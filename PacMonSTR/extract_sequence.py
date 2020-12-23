@@ -28,14 +28,14 @@ def query_coords(read,start,end):
             break
     return (query_start,query_end)
         
-def hap_seq(bam,chrom,start,end,flank):
+def hap_seq(bam,chrom,start,end):
     hap_sequences = {}
     read_sequence = None
     samfile = pysam.AlignmentFile(bam)
-    for read in samfile.fetch(chrom,max(1,start),end + flank):
+    for read in samfile.fetch(chrom,start,end):
         if skip_read(read):
             continue
-        hap = read.get_tag("RG",with_value_type=True)
+        hap = read.get_tag("RG",with_value_type=True)[0]
         if hap not in hap_sequences:
             hap_sequences[hap] = []
         query_start,query_end = query_coords(read,start,end)

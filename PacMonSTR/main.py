@@ -20,11 +20,14 @@ def create_tr(line):
 def genotype_tr(line,ref,padding,bam):
     tr = create_tr(line)
     tr.add_flanks(ref,padding)
-    hap_seqs = hap_seq(bam,tr.chrom,tr.start,tr.end,padding)
+    start = max(1,tr.start - padding)
+    end = tr.end + padding
+    hap_seqs = hap_seq(bam,tr.chrom,start,end)
     for hap in hap_seqs:
         for seq in hap_seqs[hap]:
             tr.add_overlapping_seq(hap,seq)
             tr.genotype_seqs()
+            print(tr)
             
 def main():
     parser = argparse.ArgumentParser(description='Genotype TRs')
