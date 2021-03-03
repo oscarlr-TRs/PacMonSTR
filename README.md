@@ -12,6 +12,8 @@ git clone https://github.com/oscarlr/PacMonSTR.git
 cd PacMonSTR
 conda install cython
 conda install numpy
+conda install biopython
+conda install pysam
 python setup.py install
 
 pacmonstr test/test.bam test/test.bed test/ref.fa test/out.bed
@@ -22,6 +24,8 @@ pacmonstr test/test.bam test/test.bed test/ref.fa test/out.bed
 python/2.7
 cython
 numpy
+biopython
+pysam
 ```
 
 ## Manual
