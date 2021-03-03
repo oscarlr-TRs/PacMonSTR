@@ -8,12 +8,17 @@ Bioinformatics. 30, 3491–3498 (2014).
 
 ## Quick start
 ```
+conda create -n str python=2.7
+conda activate str
+
 git clone https://github.com/oscarlr/PacMonSTR.git
 cd PacMonSTR
+
 conda install cython
 conda install numpy
 conda install biopython
 conda install pysam
+
 python setup.py install
 
 pacmonstr test/test.bam test/test.bed test/ref.fa test/out.bed
