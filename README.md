@@ -52,6 +52,13 @@ optional arguments:
 ## Inputs
 ### BAM file
 The reads in the BAM file must contain read group tags "0","1" or "2". "1" and "2" correspond to haplotype 1 and haplotype 2. "0" are unphased reads.
+
+If the alignment BAM file does have a read group tag, then the tag "0" can be added to the bam file using the script `PacMonSTR/add_read_group.py`, for example:
+```
+python PacMonSTR/add_read_group.py \
+  alignment_sorted.bam \
+  alignment_sorted_with_rg.bam
+```
 ### BED file
 The bed file must contain 6 columns:
 ```
