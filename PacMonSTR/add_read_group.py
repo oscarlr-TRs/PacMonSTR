@@ -6,7 +6,7 @@ inbamfile = sys.argv[1]
 outbamfile = sys.argv[2]
 
 insamfile = pysam.AlignmentFile(inbamfile,'rb')
-outsamfile = pysam.AlignmentFile(outbamfile,'wb',header=insamfile)
+outsamfile = pysam.AlignmentFile(outbamfile,'wb',template=insamfile)
 
 def add_read_group(read):
     read_tags = read.get_tags()
@@ -19,7 +19,7 @@ def add_read_group(read):
     read.set_tags(tags_to_add)
     return read
     
-for read in unphased_bam.fetch():
+for read in insamfile.fetch():
     if read.is_secondary:
         continue
     if read.is_unmapped:
