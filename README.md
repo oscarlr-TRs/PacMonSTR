@@ -21,7 +21,13 @@ conda install pysam
 
 python setup.py install
 
+## test/test.bam is phased. The read groups have an "1" and "2" annotation specifying the haplotypes
 pacmonstr test/test.bam test/test.bed test/ref.fa test/out.bed
+
+## test/test_unphased.bam does not have read group annotations.
+python PacMonSTR/add_read_group.py test/test_unphased.bam test/test_unphased_with_rg.bam
+samtools index test/test_unphased_with_rg.bam
+pacmonstr test/test_unphased_with_rg.bam test/test.bed test/ref.fa test/out.bed
 ```
 
 ## Required packages
