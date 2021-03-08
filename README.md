@@ -24,7 +24,8 @@ python setup.py install
 ## test/test.bam is the phased alignment of reads to the reference. The read groups have an "1" and "2" annotation specifying the haplotypes
 pacmonstr test/test.bam test/test.bed test/ref.fa test/out.bed
 
-## test/test_unphased.bam is the alignment of reads to the reference. It does not have read group annotations, therefore, the read groups are added using PacMonSTR/add_read_group.py 
+## test/test_unphased.bam is the alignment of reads to the reference. It does not have read group annotations, therefore, 
+## the read groups are added using PacMonSTR/add_read_group.py 
 python PacMonSTR/add_read_group.py test/test_unphased.bam test/test_unphased_with_rg.bam
 samtools index test/test_unphased_with_rg.bam
 pacmonstr test/test_unphased_with_rg.bam test/test.bed test/ref.fa test/out.bed
