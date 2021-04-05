@@ -4,17 +4,18 @@ import pysam
 
 inbamfile = sys.argv[1]
 outbamfile = sys.argv[2]
+read_group = sys.argv[3]
 
 insamfile = pysam.AlignmentFile(inbamfile,'rb')
 outsamfile = pysam.AlignmentFile(outbamfile,'wb',template=insamfile)
 
-def add_read_group(read):
+def add_read_group(read,read_group):
     read_tags = read.get_tags()
     tags_to_add = []
     for tag in read_tags:
         if tag[0] != "RG":
             tags_to_add.append(tag)
-    haptag = ("RG", str(0), "Z")
+    haptag = ("RG", read_group, "Z")
     tags_to_add.append(haptag)
     read.set_tags(tags_to_add)
     return read
@@ -26,7 +27,7 @@ for read in insamfile.fetch():
         continue
     if read.is_supplementary:
         continue
-    out_read = add_read_group(read)
+    out_read = add_read_group(read,read_group)
     outsamfile.write(out_read)
 
 insamfile.close()
